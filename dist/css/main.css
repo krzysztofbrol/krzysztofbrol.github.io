@@ -310,7 +310,7 @@ template {
 
 .hero {
   max-width: 1184px;
-  padding: 112px 0 200px;
+  padding: 112px 0 184px;
   margin: 0 auto; }
   .hero__description {
     color: #52606d;
@@ -342,10 +342,50 @@ template {
     max-width: 780px;
     margin: 2rem 0 1rem; }
 
+.skills {
+  max-width: 1184px;
+  margin: 0 auto; }
+  .skills__title {
+    font-size: 2.25rem;
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    padding: 1rem 0;
+    border-bottom: 2px solid #e5e8ec; }
+
+.skills-list {
+  display: -ms-grid;
+  display: grid;
+  padding: 8rem 0;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; }
+  .skills-list__item {
+    color: #52606d; }
+  .skills-list__list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    list-style-type: none; }
+  .skills-list__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    margin: 0; }
+    .skills-list__title::before {
+      content: '';
+      width: 80px;
+      height: 4px;
+      display: block;
+      background: #06c847;
+      border-radius: 8px;
+      margin-bottom: 1.5rem; }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 16px; }
+  font-size: 16px;
+  scroll-behavior: smooth; }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
