@@ -12,6 +12,9 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   scroll-behavior: smooth;
+  @media (max-width: $mobile) {
+    font-size: 11px;
+  }
 }
 
 *, *:before, *:after {
@@ -27,7 +30,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.conteiner {
-  max-width: 1184px;
+.container {
+  max-width: 1216px;
+  padding: 0 16px;
   margin: 0 auto;
 }
