@@ -431,8 +431,10 @@ template {
   .skills-list__item {
     color: #52606d;
     padding: 11px 0 11px 30px;
-    position: relative;
-    min-height: 40px; }
+    position: relative; }
+    @media (max-width: 767px) {
+      .skills-list__item {
+        padding-left: 20px; } }
     .skills-list__item::before {
       position: absolute;
       top: 10px;
@@ -442,14 +444,15 @@ template {
       width: 18px;
       height: 18px;
       background: url("../assets/img/check-green.svg"); }
-      .skills-list--violet .skills-list__item::before {
-        background-image: url("../assets/img/check-violet.svg"); }
+      .skills-list--purple .skills-list__item::before {
+        background-image: url("../assets/img/check-purple.svg"); }
       .skills-list--blue .skills-list__item::before {
         background-image: url("../assets/img/check-blue.svg"); }
       @media (max-width: 767px) {
         .skills-list__item::before {
           width: 12px;
           height: 12px;
+          top: 11px;
           background-size: contain; } }
   .skills-list__list {
     display: -ms-grid;
@@ -518,7 +521,17 @@ template {
   -webkit-box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
           box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
   border-radius: 8px;
-  overflow: hidden; }
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .project__container {
     padding: 3rem; }
   .project__description {
@@ -550,9 +563,9 @@ template {
         content: '';
         height: 2rem;
         width: 2px;
-        background: #cbd289;
+        background: #cbd209;
         display: block;
-        position: relative;
+        position: absolute;
         left: -26px;
         pointer-events: none; }
     .project__link::before {
